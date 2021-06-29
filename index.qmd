@@ -1,6 +1,6 @@
 --- 
 title: "RStudio Workbench {{< var version >}}"
-subtitle: "Administration Guide"
+subtitle: "Administration Guide (Hosted through Google Domains)"
 date: "`r Sys.Date()`"
 ---
 
