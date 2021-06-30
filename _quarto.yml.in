@@ -12,10 +12,11 @@ site:
   page-navigation: true
   site-url: https://docs.rstudio.com/ide/server-pro/
   repo-url: https://github.com/rstudio/rstudio/
+  repo-actions: [edit, issue]
 
   navbar:
     search: true
-    logo: images/logo.png
+    logo: images/Rstudio-ball.svg
     right:
       - text: "Rstudio.com"
         url: 'https://www.rstudio.com/'
@@ -189,6 +190,8 @@ number-depth: 2
 format:
   html:
     theme: cosmo
-    css: styles/guide.css
+    css: 
+      - styles/guide.css
+      - styles/styles.css
     include-in-header: google_analytics.html
     toc: true

@@ -6,17 +6,17 @@ execute:
 
 site:
   title: "RStudio Workbench Administration"
-  subtitle: "Version 6.29.2021-1406"
+  subtitle: "Version 6.30.2021-0830"
   downloads: [docx, pdf, epub]
   sharing: [twitter, facebook, linkedin]
   page-navigation: true
-  site-url: https://www.incog-workbench.com
-  repo-url: https://github.com/rstudio/rstudio
+  site-url: https://pommevilla.github.io/incog-workbench/
+  repo-url: https://github.com/pommevilla/incog-workbench
   repo-actions: [edit, issue]
 
   navbar:
     search: true
-    logo: images/logo.png
+    logo: images/RStudio-ball.svg
     right:
       - text: "Rstudio.com"
         url: 'https://www.rstudio.com/'
@@ -190,6 +190,8 @@ number-depth: 2
 format:
   html:
     theme: cosmo
-    css: styles/guide.css
+    css: 
+      - styles/guide.css
+      - styles/styles.css
     include-in-header: google_analytics.html
     toc: true
