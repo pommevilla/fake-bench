@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -741,18 +741,8 @@
 <p>Starting in Safari 13, if you are loading RStudio inside a browser frame on a completely different domain all cookies will be blocked because those will be considered third-party cookies.</p>
 <p>Embedding RStudio in a subdomain of the main site causes its cookies to be considered first-party, allowing RStudio to work.</p>
 <p>Alternatively, you can place RStudio in the same domain as the main wrapping site but under a different URL path. This requires using a proxy in front of both the main site and RStudio. See <a href="../access_and_security/running_with_a_proxy.html">Running with a Proxy</a> below for more information.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>In the near future, most browsers vendors plan to apply the same restrictions to cookies in some degree.</p>
-</div>
 </div>
 <!-- -->
 </section>

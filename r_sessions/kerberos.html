@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -808,32 +808,12 @@
 <p>You can use PAM sessions to arrange for <a href="https://en.wikipedia.org/wiki/Kerberos_(protocol)">Kerberos</a> tickets to be made available for use by R sessions. This is accomplished using the <a href="https://linux.die.net/man/8/pam_sss">pam_sss</a> PAM module. Note that you may need to install this module separately depending on which Linux distribution/version you are running.</p>
 <section id="configuration" class="level3">
 <h3 class="anchored" data-anchor-id="configuration">Configuration</h3>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>You should be sure to understand the previous section on <a href="../r_sessions/pam_sessions.html">PAM Sessions</a> before attempting to modify your configuration to support Kerberos.</p>
 </div>
-</div>
 <p>The following are simple examples of the <code>pam_sss</code> and <code>sssd.conf</code> configuration directives you would need to add to use Kerberos with RStudio. Note that the sssd Kerberos backend supports a large number of options, some of which may be required to get Kerberos working correctly in your environment. You should consult the <a href="https://linux.die.net/man/5/sssd-krb5">documentation</a> before proceeding to ensure you’ve specified all options correctly.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>If you are migrating your Kerberos settings from the now deprecated <code>pam_krb5</code> to <code>pam_sss</code>, consult the <a href="https://sssd.io/docs/users/pam_krb5_migration.html">pam_krb5 migration documentation</a> for additional information.</p>
-</div>
 </div>
 <p>The main PAM profile for RStudio should be modified to include the following <code>pam_sss</code> directives:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/pam.d/rstudio</span></span>

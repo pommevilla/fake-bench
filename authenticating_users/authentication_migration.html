@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -755,18 +755,8 @@
 <li>RStudio is configured with the appropriate SSO authentication mechanism.</li>
 <li>The configured SAML attribute or OpenID claim for username from your Identity Management system matches the names of your <strong>existing</strong> local system accounts.</li>
 </ul>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>If PAM was used with Kerberos, please note that the credential forwarding functionality offered by Kerberos is only possible with PAM and it cannot be leveraged directly by RStudio when using SSO.</p>
-</div>
 </div>
 </section>
 <section id="migrating-to-pam" class="level3">
@@ -784,49 +774,19 @@ Important
 </section>
 <section id="migrating-to-proxied-authentication" class="level3">
 <h3 class="anchored" data-anchor-id="migrating-to-proxied-authentication">Migrating to Proxied authentication</h3>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>This migration is not recommended unless none of the other existing authentication mechanisms are sufficient for your organization’s needs.</p>
-</div>
 </div>
 <p>If <a href="#migrating-from-pam">Migrating from PAM</a>, you can follow the same recommendations listed above for SSO, noting that the HTTP header for username must match existing accounts. If migrating from SAML or OpenID, the same observation on the HTTP header for username applies.</p>
 </section>
 <section id="migrating-from-google-accounts" class="level3">
 <h3 class="anchored" data-anchor-id="migrating-from-google-accounts">Migrating from Google accounts</h3>
 <p>Migrating from Google accounts is similar to <a href="#migrating-from-pam">Migrating from PAM</a> to SSO, or <a href="#migrating-to-pam">Migrating to PAM</a>.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><strong>Google accounts have been deprecated</strong> and we strongly recommend against migrating to this authentication.</p>
 </div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>If you are currently using Google accounts for authentication, the migration from Google accounts to OpenID using Google itself as the OpenID provider is not yet supported. We recommend to keep using Google accounts or migrating to some other <strong>non-Google</strong> SSO authentication.</p>
-</div>
 </div>
 <!-- -->
 </section>

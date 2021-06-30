@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -818,18 +818,8 @@
 <p>Users have an option to stay signed in across browser sessions when using PAM or Google authentication methods. By default when choosing the stay signed in option users will remain signed in for 30 days. You can modify this behavior using the <code>auth-stay-signed-in-days</code> setting. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-stay-signed-in-days</span><span class="ot">=</span><span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p>This setting is deprecated in favor of the <code>auth-timeout-minutes</code> setting for additional security. See <a href="#inactivity-timeout">Inactivity Timeout</a> above for more information.</p>
-</div>
 </div>
 <p>Note that for this setting to take effect, <code>auth-timeout-minutes</code> must be set to 0.</p>
 <p>If you want to prevent users from being able to stay signed in, you can prevent the “Stay Signed In” option from being shown to them by using the <code>auth-stay-signed-in</code> setting. For example:</p>

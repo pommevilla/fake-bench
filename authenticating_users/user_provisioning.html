@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -740,31 +740,11 @@
 <h2 class="anchored" data-anchor-id="user-provisioning">User Provisioning</h2>
 <p>It is a common practice in Linux environments to configure <a href="https://sssd.io/"><code>sssd</code></a> to fetch users and groups from an LDAP or Active Directory server to automate the creation (provisioning) of local system accounts.</p>
 <p>In addition to user creation, <code>sssd</code> can also be configured to authenticate or authorize users via PAM using the <code>pam_sss</code> module.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p><a href="https://en.wikipedia.org/wiki/Name_Service_Switch"><code>nss</code></a> is an older alternative to <code>sssd</code> that also has LDAP synchronization capabilities. However, differently from <code>sssd</code>, it offers no support for authentication.</p>
 </div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>When a user has an active session in RStudio, changes to his or her local account name (username) or <code>uid</code> are not supported and it can lead to unexpected behaviors in RStudio.</p>
-</div>
 </div>
 <!-- -->
 </section>

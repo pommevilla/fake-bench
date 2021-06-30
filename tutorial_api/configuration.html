@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -208,7 +208,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -901,20 +901,10 @@
 <p>To enable the Tutorial API example page to host RStudio Workbench on a <strong>non-production localhost server</strong>, do the following:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">www-frame-origin</span><span class="ot">=</span><span class="st">http://</span><span class="kw">localhost</span><span class="st">:</span><span class="dv">8080</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>If the <code>www-frame-origin</code> option is set to <code>same</code> or <code>any</code> instead of a URI, you must add the following setting with the actual URI:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rsession.conf</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">tutorial-api-client-origin</span><span class="ot">=</span><span class="st">http://</span><span class="kw">localhost</span><span class="st">:</span><span class="dv">8080</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 <section id="enable-api-calls-from-host-page" class="level3">
@@ -936,18 +926,8 @@ Note
 <p>The Tutorial API cannot be used to manipulate the RStudio Workbench Home Page. To disable the home page:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">server-user-home-page</span><span class="ot">=</span><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The <code>server-user-home-page</code> setting is automatically forced on if Job Launcher sessions are enabled via <code>launcher-sessions-enabled=true</code> in <code>/etc/rstudio/rserver.conf</code>.</p>
-</div>
 </div>
 </section>
 <section id="disable-multiple-session-support" class="level3">
@@ -956,18 +936,8 @@ Note
 <div class="sourceCode" id="cb6"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">server-multiple-sessions</span><span class="ot">=</span><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If multiple sessions are disabled, the Home Page is automatically turned off, so not necessary to include both settings.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The <code>server-multiple-sessions</code> setting is automatically forced on when Job Launcher sessions are enabled via <code>launcher-sessions-enabled=true</code> in <code>/etc/rstudio/rserver.conf</code>.</p>
-</div>
 </div>
 </section>
 <section id="serve-the-example-page" class="level3">

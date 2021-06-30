@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -860,18 +860,8 @@
 <section id="single-node-routing-1" class="level4">
 <h4 class="anchored" data-anchor-id="single-node-routing-1">Single Node Routing</h4>
 <p>For a Single Node Routing deployment, you would configure each node of the cluster to use SSL as described in the <a href="../access_and_security/secure_sockets.html">Secure Sockets (SSL)</a> section. The nodes will then use SSL for both external and intra-machine communication.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>In this configuration, you must ensure that your <code>load-balancer</code> file lists the hostname in the same format listed on host’s SSL certificate in the Common Name (CN) or Subject Alternative Name (SAN) field, so that the nodes are able to validate each others’ certificates when connecting.</p>
-</div>
 </div>
 </section>
 <section id="multiple-node-routing-1" class="level4">

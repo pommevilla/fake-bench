@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -819,18 +819,8 @@
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> rstudio-server install-vs-code /opt/code-server <span class="at">--extensions-dir</span><span class="op">=</span>/opt/code-server/extensions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Any arguments after the installation directory will be added to the <code>args</code> entry in <code>vscode.conf</code>, which is supplied to the <code>code-server</code> binary when the session is started. Note that if a global extensions directory is provided this way, this command will also automatically install the RStudio Workbench VS Code extension as described in the <a href="#installing-the-rstudio-workbench-extension">Installing the RStudio Workbench Extension</a> section.</p>
 <p>Once the installation completes, you’ll need to restart the RStudio service for it to detect availability of VS Code sessions.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>You must also install code-server on all Launcher nodes (for Local or Slurm plugins) and within any containers used (if using Kubernetes).</p>
-</div>
 </div>
 </section>
 <section id="installing-the-rstudio-workbench-extension" class="level3">
@@ -892,18 +882,8 @@ Note
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the extension</span></span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ex">/opt/code-server/code-server</span> <span class="at">--install-extension</span> ./rstudio-workbench-<span class="va">${RSW_EXT_VERSION}</span>.vsix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Installing the extension manually when a global installation directory is not in use will require you to repeat the operation for every user.</p>
-</div>
 </div>
 </section>
 <section id="manually-installing-language-extensions" class="level4">
@@ -916,18 +896,8 @@ Note
 <ol start="2" type="1">
 <li>Download an extension in VSIX format from an online marketplace such as <a href="https://open-vsx.org">Open VSX</a>. Then, install it using the <code>--install-extension</code> command like the example above, passing the VSIX file path as the extension name. Note that if the latest version of the extension is incompatible with the version of <code>code-server</code>, it will fail to install. You can try using an older version of the extension in this case.</li>
 </ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>It is against VS Code’s Terms of Service to use the official Marketplace extensions with third party tools like <code>code-server</code>. We strongly recommend using a free and open source alternative like Open VSX.</p>
-</div>
 </div>
 <ol start="3" type="1">
 <li>Build the extension from source. There are several extensions freely available on GitHub that can be built into a VSIX file yourself and then installed via the <code>--install-extension</code> command. Building third party extensions from source is outside of the scope of this document.</li>

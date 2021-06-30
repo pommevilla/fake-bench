@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -820,18 +820,8 @@
 <li><p>User accounts must be accessible from each node and usernames and user ids must be identical on all nodes. The same applies for any groups used by RStudio users, and also to the rstudio service user account.</p></li>
 <li><p>The clocks on all nodes must be synchronized.</p></li>
 <li><p>User home directories must be accessible via <strong>shared storage</strong> (e.g. all nodes mounting the same NFS volume).</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Due to high latencies, use of EFS (Elastic File System) for home directories within AWS is strongly discouraged. If EFS is used, RStudio will experience highly degraded performance. We recommend using a traditional NFSv3 or NFSv4 mount instead.</p>
-</div>
 </div></li>
 <li><p>An explicit server-wide shared storage path also must be defined. See the <a href="../r_sessions/project_sharing.html#shared-storage">Shared Storage</a> section for additional details.</p></li>
 <li><p>RStudio must be configured to use a <a href="../database/configuration.html#postgresql">PostgreSQL</a> database, and an empty database must be present for RStudio to write important cross-node state. If you have previously run RStudio with a <a href="../database/configuration.html#sqlite">SQLite</a> database, it is strongly advised that you execute the database <a href="../database/migration.html#migration">Migration</a> to the PostgreSQL database first. For more information, see <a href="../database/database.html">Database</a>.</p></li>

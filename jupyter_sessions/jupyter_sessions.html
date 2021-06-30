@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -744,18 +744,8 @@
 <section id="jupyter-sessions" class="level2 pro-header">
 <h2 class="pro-header anchored" data-anchor-id="jupyter-sessions">Jupyter Sessions</h2>
 <p>RStudio Workbench allows you to launch Jupyter sessions from the home page via the Job Launcher, if configured. Users have the option of starting either JupyterLab or Jupyter Notebook sessions that allow them to work with Jupyter while still working within the administrative framework provided by RStudio, such as authentication, PAM session management, etc.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Before Jupyter sessions can be launched, the Job Launcher must be setup correctly. For more information, see the <a href="../job_launcher/job_launcher.html">Job Launcher</a> section.</p>
-</div>
 </div>
 <!-- -->
 </section>

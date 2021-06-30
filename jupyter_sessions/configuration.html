@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -962,31 +962,11 @@
 <h3 class="anchored" data-anchor-id="launcher-configuration">Launcher Configuration</h3>
 <p>When creating containerized Jupyter sessions via the Job Launcher, you will need to specify mount points as appropriate to mount the users’ home drives and any other desired paths. In order for sessions to run properly within containers, it is <strong>required</strong> to mount the home directories into the containers.</p>
 <p>For more information, see <a href="../job_launcher/configuration.html#launcher-mounts">Launcher Mounts</a>. Note that you can specify the <code>Workbench</code> with either <code>JupyterLab</code> or <code>Jupyter Notebook</code> to configure mount entries that should only be mounted for JupyterLab and Jupyter Notebook sessions, respectively.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>If you are using NFSv3 for the shared storage for user home directories, you will need to set the <code>local_lock=all</code> NFS setting in /etc/fstab in order for Jupyter sessions to work properly. Failure to do this will cause Jupyter sessions to hang. For this reason, we strongly recommend the use of NFSv4 for Jupyter sessions. See the <a href="https://linux.die.net/man/5/nfs">NFS documentation</a> for information on NFS settings.</p>
 </div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Only a user’s home folder is visible within Jupyter sessions. To access other folders, create symbolic links to them within the home folder.</p>
-</div>
 </div>
 </section>
 <section id="container-configuration" class="level3">
@@ -1044,18 +1024,8 @@ Note
 <p>With the release of JupyterLab 3, it is now easier for system administrator to add extensions to Jupyter by using <code>pip</code>. Simply <code>pip install</code> the extension you want, and it will show up in JupyterLab sessions launched from RStudio Workbench.</p>
 <p>For example, to install the <code>jupyterlab-kernelspy</code> extension using pip:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyterlab-kernelspy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>You will need to install the desired extensions on all Launcher nodes that are running JupyterLab sessions. For containerized sessions, the extension must be installed in the container image(s) that are used.</p>
-</div>
 </div>
 <p>There is no need to explicitly enable or disable the extension. Once installed, active sessions can see the extension after refreshing the browser. Other extensions can be found on the <a href="https://pypi.org">Pypi.org site</a>.</p>
 <p>In previous versions of JupyterLab, you needed to install packages from source and build them with <code>nodejs</code>. This flow is still supported, but installing prebuilt extensions via <code>pip</code> is much simpler. For more information, see the <a href="https://jupyterlab.readthedocs.io/en/stable/user/extensions.html">JupyterLab extension docs</a>.</p>

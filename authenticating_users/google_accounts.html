@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -208,7 +208,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -886,18 +886,8 @@
 
 <section id="google-accounts-deprecated" class="level2 pro-header">
 <h2 class="pro-header anchored" data-anchor-id="google-accounts-deprecated">Google Accounts (deprecated)</h2>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>While it is still possible to configure this authentication method, note that in future releases of RStudio, this authentication method will migrate to use OpenID Connect instead; Google itself uses OpenID as an underlying authentication mechanism. Additionally, RStudio Desktop Pro clients will be unable to connect to RStudio Workbench when it is configured to use Google Authentication due to new restrictions from Google - see <a href="https://developers.googleblog.com/2020/08/guidance-for-our-effort-to-block-less-secure-browser-and-apps.html">Google’s Notice</a> for more information.</p>
-</div>
 </div>
 <p>RStudio Workbench can be configured to authenticate users via Google Accounts. This enables users to log in with their existing Gmail or Google Apps credentials and to be automatically authenticated to RStudio whenever they are already logged into their Google account.</p>
 <section id="registering-with-google" class="level3">
@@ -933,18 +923,8 @@ Note
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">client-secret</span><span class="ot">=</span><span class="st">BhCC6rK7Sj2ZtPH0ord7lO1w</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>/etc/rstudio/google-client-secret</code> file should have user read/write file permissions (i.e., 0600) to protect it’s contents from other users. You can ensure this as follows:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo chmod 0600 /etc/rstudio/google-client-secret</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>The above <code>client-id</code> and <code>client-secret</code> aren’t the actual values you’ll use. Rather, you should substitute the values that you obtained from Google when registering your site for OAuth authentication.</p>
-</div>
 </div>
 </section>
 <section id="translating-to-local-accounts" class="level3">
@@ -955,18 +935,8 @@ Important
 <p>If you choose to create local accounts that match Google email addresses, be sure to use only lowercase characters in the account name since Google email addresses are transformed to lower-case prior to matching them to local account names.</p>
 <p>One problem with creating local accounts that match Google email addresses is that they often contain characters that are invalid by default within Linux usernames (e.g.&nbsp;@ or .). On Debian/Ubuntu systems it’s possible to force the system to create a user with these characters. Here’s an example of creating a user with a username that contains typically invalid characters:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo adduser <span class="at">--force-badname</span> <span class="op">&lt;</span>username<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>The <code>--force-badname</code> option is only available on Debian/Ubuntu systems and is not available on RedHat/CentOS or SLES systems.</p>
-</div>
 </div>
 <p>If the users you are creating will only be accessing the server via RStudio, you may also want to disable their ability to log in as a normal interactive user and to specify that they have no password. For example:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo adduser <span class="at">--force-badname</span> <span class="at">--disabled-login</span> <span class="at">--disabled-password</span> <span class="op">&lt;</span>username<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

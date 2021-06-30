@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -830,18 +830,8 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rsession.conf</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">session-timeout-minutes</span><span class="ot">=</span><span class="dv">360</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The default value if none is explicitly specified is 120 minutes.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>This setting and a few others discussed in this section are specified in the <code>/etc/rstudio/rsession.conf</code> file (rather than the <code>rserver.conf</code> file previously referenced).</p>
-</div>
 </div>
 <p>There are some conditions where an R session will not be suspended, these include:</p>
 <ol type="1">
@@ -883,18 +873,8 @@ Important
 <h4 class="pro-header anchored" data-anchor-id="session-timeout-kill">Session Timeout Kill</h4>
 <p>To configure the amount of time to wait before forcefully killing and destroying sessions you can use the <code>session-timeout-kill-hours</code> option in the <code>/etc/rstudio/rsession.conf</code> file. This allows you to specify how much time should pass before a session is automatically cleaned up. This is the length of time during which a session exists without user input (<strong>regardless of computation status</strong>) allowing you to automatically reclaim temporary disk space used by the session, and to stop its processes and children.</p>
 <p>This setting should only be used to ensure that any sessions that users have forgotten about are destroyed, reclaiming valuable disk space.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><strong>Sessions can be destroyed while important computations are executing</strong>. The user whose session is cleaned will also lose all unsaved code and data.</p>
-</div>
 </div>
 <p>This setting can also be used in conjunction with <code>session-timeout-minutes</code>, allowing already suspended sessions to be cleaned up.</p>
 <p>For example:</p>
@@ -918,18 +898,8 @@ Important
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">~/.local/share/rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This folder contains information on all of a user’s active RStudio sessions, including all of the session data when the session is suspended. It also includes various internal RStudio state. Deleting it will result in a factory-fresh RStudio experience for the user, with the exception of their per-user settings (which are described in <a href="customizing_session_settings.html">Customizing Session Settings</a>).</p>
 <p>Because this folder can include arbitrary amounts of suspended session data, it can become very large. We recommend ensuring that each user has sufficient disk space quota to store suspended sessions along with the data for their R projects, and using other controls to clean up old data (such as <code>session-timeout-kill-hours</code>)</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>RStudio 1.3 and earlier stored user state in the folder <code>~/.rstudio</code> (non-configurable). If you are upgrading to RStudio 1.4 from an earlier release, RStudio will automatically move user state to the new location when the user starts their first IDE session after the upgrade. If there’s a possibility you may downgrade to a prior RStudio release, we recommend configuring RStudio to use the old location temporarily; see below for instructions.</p>
-</div>
 </div>
 <section id="storage-location-customization" class="level4">
 <h4 class="anchored" data-anchor-id="storage-location-customization">Storage Location Customization</h4>

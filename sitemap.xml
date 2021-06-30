@@ -2,486 +2,482 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https:/incog-workbench.com/data_connectivity/data_connectivity.html</loc>
-    <lastmod>2021-06-30T14:18:47.162Z</lastmod>
+    <lastmod>2021-06-30T14:26:33.981Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/data_connectivity/snippet_files.html</loc>
-    <lastmod>2021-06-30T14:18:47.870Z</lastmod>
+    <lastmod>2021-06-30T14:26:34.741Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/data_connectivity/connectivity_using_r_packages.html</loc>
-    <lastmod>2021-06-30T14:18:48.183Z</lastmod>
+    <lastmod>2021-06-30T14:26:35.081Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/data_connectivity/connectivity_using_odbc.html</loc>
-    <lastmod>2021-06-30T14:18:48.487Z</lastmod>
+    <lastmod>2021-06-30T14:26:35.424Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/r_executable_and_libraries.html</loc>
-    <lastmod>2021-06-30T14:18:48.935Z</lastmod>
+    <lastmod>2021-06-30T14:26:35.884Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/notifications.html</loc>
-    <lastmod>2021-06-30T14:18:49.355Z</lastmod>
+    <lastmod>2021-06-30T14:26:36.332Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/kerberos.html</loc>
-    <lastmod>2021-06-30T14:18:49.755Z</lastmod>
+    <lastmod>2021-06-30T14:26:36.760Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/terminal_websockets.html</loc>
-    <lastmod>2021-06-30T14:18:50.091Z</lastmod>
+    <lastmod>2021-06-30T14:26:37.128Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/multiple_r_sessions.html</loc>
-    <lastmod>2021-06-30T14:18:50.447Z</lastmod>
+    <lastmod>2021-06-30T14:26:37.504Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/workspace_management.html</loc>
-    <lastmod>2021-06-30T14:18:51.051Z</lastmod>
+    <lastmod>2021-06-30T14:26:38.116Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/rstudio_connect_server.html</loc>
-    <lastmod>2021-06-30T14:18:51.399Z</lastmod>
+    <lastmod>2021-06-30T14:26:38.476Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/feature_limits.html</loc>
-    <lastmod>2021-06-30T14:18:51.859Z</lastmod>
+    <lastmod>2021-06-30T14:26:39.004Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/project_sharing.html</loc>
-    <lastmod>2021-06-30T14:18:52.355Z</lastmod>
+    <lastmod>2021-06-30T14:26:39.516Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/r_sessions.html</loc>
-    <lastmod>2021-06-30T14:18:52.675Z</lastmod>
+    <lastmod>2021-06-30T14:26:39.840Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/directory_management.html</loc>
-    <lastmod>2021-06-30T14:18:53.043Z</lastmod>
+    <lastmod>2021-06-30T14:26:40.236Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/pam_sessions.html</loc>
-    <lastmod>2021-06-30T14:18:53.575Z</lastmod>
+    <lastmod>2021-06-30T14:26:40.760Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/customizing_session_settings.html</loc>
-    <lastmod>2021-06-30T14:18:54.103Z</lastmod>
+    <lastmod>2021-06-30T14:26:41.316Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/user_and_group_profiles.html</loc>
-    <lastmod>2021-06-30T14:18:54.607Z</lastmod>
+    <lastmod>2021-06-30T14:26:41.816Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/first_project_template.html</loc>
-    <lastmod>2021-06-30T14:18:54.975Z</lastmod>
+    <lastmod>2021-06-30T14:26:42.200Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/session_startup_scripts.html</loc>
-    <lastmod>2021-06-30T14:18:55.439Z</lastmod>
+    <lastmod>2021-06-30T14:26:42.656Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_sessions/package_installation.html</loc>
-    <lastmod>2021-06-30T14:18:55.899Z</lastmod>
+    <lastmod>2021-06-30T14:26:43.076Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/troubleshooting.html</loc>
-    <lastmod>2021-06-30T14:18:56.263Z</lastmod>
+    <lastmod>2021-06-30T14:26:43.440Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/creating_plugins.html</loc>
-    <lastmod>2021-06-30T14:18:56.567Z</lastmod>
+    <lastmod>2021-06-30T14:26:43.752Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/running_the_launcher.html</loc>
-    <lastmod>2021-06-30T14:18:56.879Z</lastmod>
+    <lastmod>2021-06-30T14:26:44.068Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/job_launcher.html</loc>
-    <lastmod>2021-06-30T14:18:57.203Z</lastmod>
+    <lastmod>2021-06-30T14:26:44.400Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/configuration.html</loc>
-    <lastmod>2021-06-30T14:18:57.919Z</lastmod>
+    <lastmod>2021-06-30T14:26:45.132Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/overview.html</loc>
-    <lastmod>2021-06-30T14:18:58.235Z</lastmod>
+    <lastmod>2021-06-30T14:26:45.452Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/job_launcher/load_balancing.html</loc>
-    <lastmod>2021-06-30T14:18:58.559Z</lastmod>
+    <lastmod>2021-06-30T14:26:45.784Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/jupyter_sessions/troubleshooting.html</loc>
-    <lastmod>2021-06-30T14:18:58.863Z</lastmod>
+    <lastmod>2021-06-30T14:26:46.132Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/jupyter_sessions/jupyter_sessions.html</loc>
-    <lastmod>2021-06-30T14:18:59.156Z</lastmod>
+    <lastmod>2021-06-30T14:26:46.452Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/jupyter_sessions/configuration.html</loc>
-    <lastmod>2021-06-30T14:18:59.668Z</lastmod>
+    <lastmod>2021-06-30T14:26:46.984Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/rstudio_ide_commands/rstudio_ide_commands.html</loc>
-    <lastmod>2021-06-30T14:19:00.876Z</lastmod>
+    <lastmod>2021-06-30T14:26:48.280Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/database/migration.html</loc>
-    <lastmod>2021-06-30T14:19:01.192Z</lastmod>
+    <lastmod>2021-06-30T14:26:48.628Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/database/configuration.html</loc>
-    <lastmod>2021-06-30T14:19:01.632Z</lastmod>
+    <lastmod>2021-06-30T14:26:49.104Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/database/database.html</loc>
-    <lastmod>2021-06-30T14:19:01.936Z</lastmod>
+    <lastmod>2021-06-30T14:26:49.432Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/ip_access_rules.html</loc>
-    <lastmod>2021-06-30T14:19:02.284Z</lastmod>
+    <lastmod>2021-06-30T14:26:49.796Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/secure_sockets.html</loc>
-    <lastmod>2021-06-30T14:19:02.648Z</lastmod>
+    <lastmod>2021-06-30T14:26:50.200Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/running_with_a_proxy.html</loc>
-    <lastmod>2021-06-30T14:19:03.224Z</lastmod>
+    <lastmod>2021-06-30T14:26:50.820Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/ssl_ports.html</loc>
-    <lastmod>2021-06-30T14:19:03.592Z</lastmod>
+    <lastmod>2021-06-30T14:26:51.220Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/same_site_cookies.html</loc>
-    <lastmod>2021-06-30T14:19:03.944Z</lastmod>
+    <lastmod>2021-06-30T14:26:51.608Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/additional_security_considerations.html</loc>
-    <lastmod>2021-06-30T14:19:04.300Z</lastmod>
+    <lastmod>2021-06-30T14:26:51.988Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/frame_origin.html</loc>
-    <lastmod>2021-06-30T14:19:04.664Z</lastmod>
+    <lastmod>2021-06-30T14:26:52.368Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/server_permissions.html</loc>
-    <lastmod>2021-06-30T14:19:05.028Z</lastmod>
+    <lastmod>2021-06-30T14:26:52.748Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/cookies.html</loc>
-    <lastmod>2021-06-30T14:19:05.372Z</lastmod>
+    <lastmod>2021-06-30T14:26:53.112Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/network_port_and_address.html</loc>
-    <lastmod>2021-06-30T14:19:05.716Z</lastmod>
+    <lastmod>2021-06-30T14:26:53.468Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/additional_headers.html</loc>
-    <lastmod>2021-06-30T14:19:06.056Z</lastmod>
+    <lastmod>2021-06-30T14:26:53.824Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/access_and_security.html</loc>
-    <lastmod>2021-06-30T14:19:06.380Z</lastmod>
+    <lastmod>2021-06-30T14:26:54.164Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/access_and_security/compatibility_with_safari.html</loc>
-    <lastmod>2021-06-30T14:19:06.688Z</lastmod>
+    <lastmod>2021-06-30T14:26:54.488Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/tutorial_api_methods.html</loc>
-    <lastmod>2021-06-30T14:19:07.196Z</lastmod>
+    <lastmod>2021-06-30T14:26:54.968Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/tutorial_api_callbacks.html</loc>
-    <lastmod>2021-06-30T14:19:07.704Z</lastmod>
+    <lastmod>2021-06-30T14:26:55.300Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/tutorial_api.html</loc>
-    <lastmod>2021-06-30T14:19:08.028Z</lastmod>
+    <lastmod>2021-06-30T14:26:55.628Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/interface.html</loc>
-    <lastmod>2021-06-30T14:19:08.492Z</lastmod>
+    <lastmod>2021-06-30T14:26:56.112Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/configuration.html</loc>
-    <lastmod>2021-06-30T14:19:08.880Z</lastmod>
+    <lastmod>2021-06-30T14:26:56.528Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/tutorial_api/overview.html</loc>
-    <lastmod>2021-06-30T14:19:09.196Z</lastmod>
+    <lastmod>2021-06-30T14:26:56.876Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_package_dependencies/r_package_dependencies.html</loc>
-    <lastmod>2021-06-30T14:19:09.628Z</lastmod>
+    <lastmod>2021-06-30T14:26:57.340Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/vscode_sessions/multiple_sessions.html</loc>
-    <lastmod>2021-06-30T14:19:09.928Z</lastmod>
+    <lastmod>2021-06-30T14:26:57.668Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/vscode_sessions/troubleshooting.html</loc>
-    <lastmod>2021-06-30T14:19:10.229Z</lastmod>
+    <lastmod>2021-06-30T14:26:57.988Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/vscode_sessions/configuration.html</loc>
-    <lastmod>2021-06-30T14:19:10.681Z</lastmod>
+    <lastmod>2021-06-30T14:26:58.440Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/vscode_sessions/vs_code_sessions.html</loc>
-    <lastmod>2021-06-30T14:19:11.005Z</lastmod>
+    <lastmod>2021-06-30T14:26:58.768Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/vscode_sessions/installation.html</loc>
-    <lastmod>2021-06-30T14:19:11.413Z</lastmod>
+    <lastmod>2021-06-30T14:26:59.196Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/other.html</loc>
-    <lastmod>2021-06-30T14:19:11.765Z</lastmod>
+    <lastmod>2021-06-30T14:26:59.556Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/hardening.html</loc>
-    <lastmod>2021-06-30T14:19:12.065Z</lastmod>
+    <lastmod>2021-06-30T14:26:59.864Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/browser_security.html</loc>
-    <lastmod>2021-06-30T14:19:12.433Z</lastmod>
+    <lastmod>2021-06-30T14:27:00.248Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/example_secure_configuration.html</loc>
-    <lastmod>2021-06-30T14:19:12.793Z</lastmod>
+    <lastmod>2021-06-30T14:27:00.612Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/set_up_ssl.html</loc>
-    <lastmod>2021-06-30T14:19:13.157Z</lastmod>
+    <lastmod>2021-06-30T14:27:01.004Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/hardening/r_session_security.html</loc>
-    <lastmod>2021-06-30T14:19:13.537Z</lastmod>
+    <lastmod>2021-06-30T14:27:01.368Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/index.html</loc>
-    <lastmod>2021-06-30T14:19:13.873Z</lastmod>
+    <lastmod>2021-06-30T14:27:01.704Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/license_details.html</loc>
-    <lastmod>2021-06-30T14:19:14.185Z</lastmod>
+    <lastmod>2021-06-30T14:27:02.036Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/floating_licensing.html</loc>
-    <lastmod>2021-06-30T14:19:14.657Z</lastmod>
+    <lastmod>2021-06-30T14:27:02.524Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/evaluations.html</loc>
-    <lastmod>2021-06-30T14:19:14.993Z</lastmod>
+    <lastmod>2021-06-30T14:27:02.864Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/userspace_licensing.html</loc>
-    <lastmod>2021-06-30T14:19:15.309Z</lastmod>
+    <lastmod>2021-06-30T14:27:03.204Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/connectivity_requirements.html</loc>
-    <lastmod>2021-06-30T14:19:15.653Z</lastmod>
+    <lastmod>2021-06-30T14:27:03.580Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/product_activation.html</loc>
-    <lastmod>2021-06-30T14:19:15.961Z</lastmod>
+    <lastmod>2021-06-30T14:27:03.928Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/license_management/license_management.html</loc>
-    <lastmod>2021-06-30T14:19:16.261Z</lastmod>
+    <lastmod>2021-06-30T14:27:04.276Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/session_initialization.html</loc>
-    <lastmod>2021-06-30T14:19:16.573Z</lastmod>
+    <lastmod>2021-06-30T14:27:04.612Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/r_versions.html</loc>
-    <lastmod>2021-06-30T14:19:16.873Z</lastmod>
+    <lastmod>2021-06-30T14:27:04.932Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/configuring_default.html</loc>
-    <lastmod>2021-06-30T14:19:17.241Z</lastmod>
+    <lastmod>2021-06-30T14:27:05.320Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/installing_r.html</loc>
-    <lastmod>2021-06-30T14:19:17.553Z</lastmod>
+    <lastmod>2021-06-30T14:27:05.652Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/managing_upgrades.html</loc>
-    <lastmod>2021-06-30T14:19:17.881Z</lastmod>
+    <lastmod>2021-06-30T14:27:06.004Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/using_multiple_versions_of_r.html</loc>
-    <lastmod>2021-06-30T14:19:18.333Z</lastmod>
+    <lastmod>2021-06-30T14:27:06.532Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/r_versions/overview.html</loc>
-    <lastmod>2021-06-30T14:19:18.629Z</lastmod>
+    <lastmod>2021-06-30T14:27:06.852Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/server_management/server_management.html</loc>
-    <lastmod>2021-06-30T14:19:18.937Z</lastmod>
+    <lastmod>2021-06-30T14:27:07.172Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/server_management/automated_crash_reporting.html</loc>
-    <lastmod>2021-06-30T14:19:19.321Z</lastmod>
+    <lastmod>2021-06-30T14:27:07.564Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/server_management/core_administrative_tasks.html</loc>
-    <lastmod>2021-06-30T14:19:20.017Z</lastmod>
+    <lastmod>2021-06-30T14:27:08.248Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/server_management/administrative_dashboard.html</loc>
-    <lastmod>2021-06-30T14:19:20.401Z</lastmod>
+    <lastmod>2021-06-30T14:27:08.664Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/server_management/logging.html</loc>
-    <lastmod>2021-06-30T14:19:20.813Z</lastmod>
+    <lastmod>2021-06-30T14:27:09.076Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/load_balancing_vs_job_launcher.html</loc>
-    <lastmod>2021-06-30T14:19:21.122Z</lastmod>
+    <lastmod>2021-06-30T14:27:09.392Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/configuration.html</loc>
-    <lastmod>2021-06-30T14:19:21.710Z</lastmod>
+    <lastmod>2021-06-30T14:27:10.008Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/balancing_methods.html</loc>
-    <lastmod>2021-06-30T14:19:22.086Z</lastmod>
+    <lastmod>2021-06-30T14:27:10.396Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/overview.html</loc>
-    <lastmod>2021-06-30T14:19:22.410Z</lastmod>
+    <lastmod>2021-06-30T14:27:10.720Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/access_and_availability.html</loc>
-    <lastmod>2021-06-30T14:19:22.782Z</lastmod>
+    <lastmod>2021-06-30T14:27:11.116Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/load_balancing/load_balancing.html</loc>
-    <lastmod>2021-06-30T14:19:23.090Z</lastmod>
+    <lastmod>2021-06-30T14:27:11.464Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/pam_basics.html</loc>
-    <lastmod>2021-06-30T14:19:23.410Z</lastmod>
+    <lastmod>2021-06-30T14:27:11.788Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/openid_connect_authentication.html</loc>
-    <lastmod>2021-06-30T14:19:23.890Z</lastmod>
+    <lastmod>2021-06-30T14:27:12.276Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/saml_sso.html</loc>
-    <lastmod>2021-06-30T14:19:24.490Z</lastmod>
+    <lastmod>2021-06-30T14:27:12.856Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/restricting_access.html</loc>
-    <lastmod>2021-06-30T14:19:24.858Z</lastmod>
+    <lastmod>2021-06-30T14:27:13.224Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/authentication_migration.html</loc>
-    <lastmod>2021-06-30T14:19:25.214Z</lastmod>
+    <lastmod>2021-06-30T14:27:13.596Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/user_provisioning.html</loc>
-    <lastmod>2021-06-30T14:19:25.522Z</lastmod>
+    <lastmod>2021-06-30T14:27:13.928Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/authorization_timeout.html</loc>
-    <lastmod>2021-06-30T14:19:25.894Z</lastmod>
+    <lastmod>2021-06-30T14:27:14.328Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/proxied_authentication.html</loc>
-    <lastmod>2021-06-30T14:19:26.386Z</lastmod>
+    <lastmod>2021-06-30T14:27:14.844Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/pam_authentication.html</loc>
-    <lastmod>2021-06-30T14:19:26.830Z</lastmod>
+    <lastmod>2021-06-30T14:27:15.312Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/google_accounts.html</loc>
-    <lastmod>2021-06-30T14:19:27.258Z</lastmod>
+    <lastmod>2021-06-30T14:27:15.772Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/customizing_signin.html</loc>
-    <lastmod>2021-06-30T14:19:27.606Z</lastmod>
+    <lastmod>2021-06-30T14:27:16.140Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/authenticating_users/authenticating_users.html</loc>
-    <lastmod>2021-06-30T14:19:27.938Z</lastmod>
+    <lastmod>2021-06-30T14:27:16.496Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/community_resources.html</loc>
-    <lastmod>2021-06-30T14:19:28.234Z</lastmod>
+    <lastmod>2021-06-30T14:27:16.828Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/management_script.html</loc>
-    <lastmod>2021-06-30T14:19:28.530Z</lastmod>
+    <lastmod>2021-06-30T14:27:17.164Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/getting_started.html</loc>
-    <lastmod>2021-06-30T14:19:29.050Z</lastmod>
+    <lastmod>2021-06-30T14:27:17.736Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/activation.html</loc>
-    <lastmod>2021-06-30T14:19:29.566Z</lastmod>
+    <lastmod>2021-06-30T14:27:18.316Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/introduction.html</loc>
-    <lastmod>2021-06-30T14:19:29.874Z</lastmod>
+    <lastmod>2021-06-30T14:27:18.656Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/professional_support.html</loc>
-    <lastmod>2021-06-30T14:19:30.178Z</lastmod>
+    <lastmod>2021-06-30T14:27:19.000Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/accessing_the_server.html</loc>
-    <lastmod>2021-06-30T14:19:30.490Z</lastmod>
+    <lastmod>2021-06-30T14:27:19.344Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/getting_started/installation.html</loc>
-    <lastmod>2021-06-30T14:19:30.806Z</lastmod>
+    <lastmod>2021-06-30T14:27:19.688Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/auditing_and_monitoring/auditing_and_monitoring.html</loc>
-    <lastmod>2021-06-30T14:19:31.090Z</lastmod>
+    <lastmod>2021-06-30T14:27:20.008Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/auditing_and_monitoring/monitoring_configuration.html</loc>
-    <lastmod>2021-06-30T14:19:31.450Z</lastmod>
+    <lastmod>2021-06-30T14:27:20.396Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/auditing_and_monitoring/auditing_configuration.html</loc>
-    <lastmod>2021-06-30T14:19:31.922Z</lastmod>
+    <lastmod>2021-06-30T14:27:20.900Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/auditing_and_monitoring/server_health_checks.html</loc>
-    <lastmod>2021-06-30T14:19:32.287Z</lastmod>
+    <lastmod>2021-06-30T14:27:21.296Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/session_user_settings/session_user_settings.html</loc>
-    <lastmod>2021-06-30T14:19:33.563Z</lastmod>
+    <lastmod>2021-06-30T14:27:22.688Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/rstudio_server_configuration/rserver_conf.html</loc>
-    <lastmod>2021-06-30T14:19:34.243Z</lastmod>
+    <lastmod>2021-06-30T14:27:23.456Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/rstudio_server_configuration/rstudio_server_configuration.html</loc>
-    <lastmod>2021-06-30T14:19:34.527Z</lastmod>
+    <lastmod>2021-06-30T14:27:23.764Z</lastmod>
   </url>
   <url>
     <loc>https:/incog-workbench.com/rstudio_server_configuration/rsession_conf.html</loc>
-    <lastmod>2021-06-30T14:19:35.003Z</lastmod>
-  </url>
-  <url>
-    <loc>https:/incog-workbench.com/404.html</loc>
-    <lastmod>2021-06-30T14:19:35.283Z</lastmod>
+    <lastmod>2021-06-30T14:27:24.312Z</lastmod>
   </url>
 </urlset>

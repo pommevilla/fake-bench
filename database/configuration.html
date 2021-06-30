@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -860,18 +860,8 @@
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># always replace any password specified in the URI.</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="dt">connection-uri</span><span class="ot">=</span><span class="st">postgresql://rstudio@localhost:</span><span class="dv">5432</span><span class="st">/rstudiodb?sslmode=allow&amp;options=-csearch_path=public</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Available PostgreSQL connection string parameters are documented in the <a href="https://www.postgresql.org/docs/10/libpq-connect.html#LIBPQ-PARAMKEYWORDS">official PostgreSQL documentation</a>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The password in <code>connection-uri</code> may contain characters that may need to be URL-encoded to work properly. Avoid encoding the password by using the separate <code>password</code> field in the configuration.</p>
-</div>
 </div>
 <section id="ssl" class="level4">
 <h4 class="anchored" data-anchor-id="ssl">SSL</h4>
@@ -905,19 +895,9 @@ Note
 <li>Add or replace the <code>password</code> option in the <code>database.conf</code> file using the encrypted password copied above.</li>
 <li>Restart RStudio. Confirm it operates normally. You should no longer see a warning about plain-text password in RStudio logs.</li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Alternatively, you can also “pipe” your password to the <code>rstudio-server encrypt-password</code> command to skip the prompt. Useful when the password is already stored elsewhere. For example:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> passwordfile <span class="kw">|</span> <span class="fu">sudo</span> rstudio-server encrypt-password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 <p>The password encryption uses the <code>secure-cookie-key</code> value. By default RStudio generates this key during installation and stores it in <code>/var/lib/rstudio-server/secure-cookie-key</code>.</p>
 <p>The same key value must be used for both encryption and decryption. If the key value used to encrypt the PostgreSQL password changes, the password must be re-encrypted with the new key and updated in <code>/etc/rstudio/database.conf</code>.</p>

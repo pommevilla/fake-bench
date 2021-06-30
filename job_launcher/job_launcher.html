@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -744,18 +744,8 @@
 <section id="job-launcher" class="level2 pro-header">
 <h2 class="pro-header anchored" data-anchor-id="job-launcher">Job Launcher</h2>
 <p>The RStudio Job Launcher provides the ability for RStudio Workbench to start processes within various batch processing systems (e.g., Slurm) and container orchestration platforms (e.g., Kubernetes). RStudio Workbench integrates with the Job Launcher to allow you to run your R Sessions within your compute cluster software of choice, and allows you to containerize your sessions for maximum process isolation and operations efficiency. Furthermore, users can submit standalone adhoc jobs to your compute cluster(s) to run computationally expensive R scripts.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Integration with the Job Launcher is not enabled in all editions of RStudio Workbench. You can run <code>rstudio-server license-manager status</code> to see if the Launcher is enabled. If it isn’t, contact <a href="mailto:sales@rstudio.com" class="email">sales@rstudio.com</a> to purchase a license with the Job Launcher enabled.</p>
-</div>
 </div>
 <!-- -->
 </section>

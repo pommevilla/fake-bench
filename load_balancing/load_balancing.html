@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -753,18 +753,8 @@
 <li><p>The ability to add and remove nodes while the cluster is running.</p></li>
 <li><p>Works standalone or can be integrated with other front-end load balancing environments.</p></li>
 </ol>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The standalone load balance and higher availability characteristics of RStudio Workbench are an exception among RStudio products. RStudio Connect and Shiny Server will require a front-end load balancing under the same scenarios. The use of an external load balancer can still be beneficial in a failover setup. See [External Load Balancers] below for details.</p>
-</div>
 </div>
 <!-- -->
 </section>

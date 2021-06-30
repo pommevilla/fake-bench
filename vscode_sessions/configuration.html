@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -926,18 +926,8 @@
 <h3 class="anchored" data-anchor-id="launcher-configuration">Launcher Configuration</h3>
 <p>When creating containerized VS Code sessions via the Job Launcher, you will need to specify mount points as appropriate to mount the users’ home drives and any other desired paths. In order for sessions to run properly within containers, it is <strong>required</strong> to mount the home directories into the containers.</p>
 <p>For more information, see <a href="../job_launcher/configuration.html#launcher-mounts">Launcher Mounts</a>. Note that you can specify the <code>Workbench</code> with <code>VS Code</code> to configure mount entries that should only be mounted for VS Code sessions.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Only a user’s home folder is visible within VS Code sessions. To access other folders, create symbolic links to them within the home folder.</p>
-</div>
 </div>
 </section>
 <section id="container-configuration" class="level3">

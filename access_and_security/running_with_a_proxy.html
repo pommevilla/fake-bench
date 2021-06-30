@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -881,18 +881,8 @@
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>      <span class="co"># OR alternatively the Forwarded header (just an example)</span></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>      proxy_set_header Forwarded <span class="st">"host=$host:$server_port;proto=$scheme;"</span>;</span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The header <code>X-RStudio-Root-Path</code> and the configuration option <code>www-root-path</code> server the same purpose. If either is set RStudio will always return cookies and redirects for the correct path, without requiring rewrite assistance from the proxy. The header value has precedence over the configuration value.</p>
-</div>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">www-root-path</span><span class="ot">=</span><span class="st">/rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -960,18 +950,8 @@ Note
 <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>ProxyPassReverse<span class="st"> /rstudio/ http://localhost:8787/</span></span>
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>ProxyPassReverseCookiePath<span class="st">  "/"  "/rstudio"</span></span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ex">ProxyRequests</span><span class="ch"> </span><span class="kw">Off</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The header <code>X-RStudio-Root-Path</code> and the configuration option <code>www-root-path</code> server the same purpose. If either is set RStudio will always return cookies and redirects for the correct path, without requiring rewrite assistance from the proxy. The header value has precedence over the configuration value.</p>
-</div>
 </div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="dt">www-root-path</span><span class="ot">=</span><span class="st">/rstudio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

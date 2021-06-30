@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -821,31 +821,11 @@
 <p>To enable authentication with SAML you add the <code>auth-saml</code> option to the RStudio configuration file <code>/etc/rstudio/rserver.conf</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml</span><span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><strong>Once you enable authentication with SAML that becomes the exclusive means of authentication</strong> - you can’t concurrently use both PAM and SAML authentication.</p>
 </div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>SAML authentication still requires <a href="../r_sessions/pam_sessions.html">PAM Sessions</a> and <code>sssd</code> to automatically create local system accounts. Without them, local system accounts have to be provisioned manually one-by-one.</p>
-</div>
 </div>
 </section>
 <section id="configuring-saml" class="level3">
@@ -861,18 +841,8 @@ Important
 <p>RStudio Workbench needs to be configured in order to trust the SAML assertions sent by your IdP.</p>
 <section id="identity-provider-metadata-setup" class="level4">
 <h4 class="anchored" data-anchor-id="identity-provider-metadata-setup">Identity Provider Metadata Setup</h4>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>RStudio Workbench expects the IdP metadata to contain the service name (<code>EntityID</code>), the Single Sign-On (SSO) URL and the signing certificate.</p>
-</div>
 </div>
 <p>The easiest way to configure RStudio Workbench is to point it to the IdP metadata URL. This can be done by adding the option <code>auth-saml-metadata-url</code>. This option automatically renews the metadata when it expires but it requires direct connectivity between your server and the IdP.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
@@ -880,18 +850,8 @@ Note
 <p>If you want to avoid direct connectivity between your server and the IdP or if that setup is not possible you should use an offline setup. In this scenario, you should download the metadata from your IdP and upload it to your server. Then, add the option <code>auth-saml-metadata-path</code> pointing to the file location within your server. This option requires manual intervention if the metadata or the signing certificate expires.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-metadata-path</span><span class="ot">=</span><span class="st">/path/to/saml/metadata.xml</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p>The metadata URL option has precedence over the metadata file path option. You must remove the URL option first before using the file option.</p>
-</div>
 </div>
 <p>If your Identity Provider requires information about RStudio in order to provide metadata, see the <a href="#manual-service-provider-setup">Manual Service Provider Setup</a> section below for a list of details you may need to provide about your RStudio Workbench server.</p>
 </section>
@@ -907,18 +867,8 @@ Warning
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-idp-entity-id</span><span class="ot">=</span><span class="st">https://idp.example.com/saml/metadata</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-idp-sso-url</span><span class="ot">=</span><span class="st">https://idp.example.com/saml/sso</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-idp-sign-cert-path</span><span class="ot">=</span><span class="st">/path/to/saml.cert</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p>The metadata URL and file path options have precedence over the individually configured options. You must remove the metadata options first before using individual settings.</p>
-</div>
 </div>
 </section>
 </section>
@@ -927,18 +877,8 @@ Warning
 <p>In order to use SAML with RStudio Workbench you also need to register your server with your IdP.</p>
 <section id="saml-attributes" class="level4">
 <h4 class="anchored" data-anchor-id="saml-attributes">SAML Attributes</h4>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>Your IdP must return in the assertion at least one attribute (or <code>NameID</code>) matching the user’s local account username (lowercase).</p>
-</div>
 </div>
 <p>By default, RStudio Workbench will look for an attribute called <code>Username</code> (case-sensitive). If you wish to use a different attribute or the assertion’s <code>NameID</code> value, add the option <code>auth-saml-sp-attribute-username</code> with the appropriate value.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
@@ -956,18 +896,8 @@ Important
 <section id="manual-service-provider-setup" class="level4">
 <h4 class="anchored" data-anchor-id="manual-service-provider-setup">Manual Service Provider Setup</h4>
 <p>If your IdP requires a manual configuration, the basic information about your server is in the SAML metadata.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The SAML metadata primarily contains information about the service name (<code>EntityID</code>) and the assertion consumer service (ACS) URL.</p>
-</div>
 </div>
 <p>If you cannot start RStudio configured with SAML because your IdP must be configured first, you may be asked the following information:</p>
 <ul>
@@ -988,18 +918,8 @@ Note
 <li><code>auth-saml-sso-initiation</code>: By default RStudio Workbench will be able to initiate an authentication with SAML (SP-initiated) or to acceept an ad-hoc assertion (IdP-initiated). If you prefer just one of these flows, use this options with either <code>sp</code> or <code>idp</code> values. When set to <code>idp</code> users will be sent to the configured IdP SSO URL if a SP-initiated flow is attempted.</li>
 <li><code>auth-saml-sp-name-id-format</code>: By default RStudio Workbench will accept any NameID Format. Add this options with the values <code>persistent</code>, <code>transient</code>, <code>emailaddress</code>, or <code>unspecified</code> to make RStudio Workbench request and expect a particular format from the IdP.</li>
 </ul>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p><code>auth-saml-sp-name-id-format=transient</code> and <code>auth-saml-sp-attribute-username=NameID</code> will not be accepted as a valid combination. It would lead to undetermined usernames in each attempt.</p>
-</div>
 </div>
 <p>Here are some examples of valid configurations of the aforementioned advanced options:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
@@ -1022,66 +942,26 @@ Warning
 <div class="sourceCode" id="cb9"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-sp-encryption-key-path</span><span class="ot">=</span><span class="st">/path/to/saml.key</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-sp-encryption-cert-path</span><span class="ot">=</span><span class="st">/path/to/saml.cert</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p>These key pair files are similar to the ones used for SSL/TLS. However, for security reasons you must never use your server’s own SSL/TLS key and certificate for SAML encryption.</p>
-</div>
 </div>
 <p>This example allows the creation of a simple self-signed public certificate and private key pair that can be used for encryption for the server “localhost” (you should use your server public facing hostname instead):</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">openssl req -x509 -newkey rsa:2048 -keyout saml.key -out saml.cert -days 365 -nodes -subj "/CN</span><span class="ot">=</span><span class="st">localhost"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="saml-request-signing" class="level3">
 <h3 class="anchored" data-anchor-id="saml-request-signing">SAML Request Signing</h3>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>In most situations, SAML authentication request signing is not required or even supported. Be sure your IdP requires signing before using this functionality.</p>
-</div>
 </div>
 <p>To enable support for signed SAML authentication requests, you need to set a signing method in your server configuration with the option <code>auth-saml-sp-request-signing-method</code>. The algorithms <code>sha1</code>, <code>sha256</code>, or <code>sha512</code> are supported. When in doubt, try <code>sha256</code> first which offers a good balance between security and compatibility.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-sp-request-signing-method</span><span class="ot">=</span><span class="st">sha256</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>By using one of the signing methods listed above the RStudio metadata will contain a <code>"signing"</code> certificate and will have the attribute <code>AuthnRequestsSigned</code> with the <code>true</code> value.</p>
 </div>
-</div>
 <p>You will also need a key pair in the form of a public certificate file and a private RSA key, both in PEM format. If you are using <a href="#saml-encryption">SAML Encryption</a>, the already configured encryption key pair will also be used for request signing.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>RStudio only accepts a single key pair. You can use a key pair for <strong>both</strong> encryption and signing requests or one just for signing. Different key pairs for signing and encryption are not currently supported.</p>
-</div>
 </div>
 <p>If you are not currently using SAML encryption, the following options should be added to your server:</p>
 <ul>
@@ -1091,18 +971,8 @@ Important
 <div class="sourceCode" id="cb12"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-sp-signing-key-path</span><span class="ot">=</span><span class="st">/path/to/signing.key</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-saml-sp-signing-cert-path</span><span class="ot">=</span><span class="st">/path/to/signing.cert</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-warning">
 <p>These key pair files are similar to the ones used for SSL/TLS. However, for security reasons you must never use your server’s own SSL/TLS key and certificate for SAML encryption.</p>
-</div>
 </div>
 <p>This example allows the creation of a simple self-signed public certificate and private key pair that can be used for encryption for the server “localhost” (you should use your server public facing hostname instead):</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dt">openssl req -x509 -newkey rsa:2048 -keyout saml.key -out saml.cert -days 365 -nodes -subj "/CN</span><span class="ot">=</span><span class="st">localhost"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

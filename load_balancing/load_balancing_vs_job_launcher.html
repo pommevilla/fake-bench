@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -739,18 +739,8 @@
 <section id="load-balancing-vs.-job-launcher" class="level2">
 <h2 class="anchored" data-anchor-id="load-balancing-vs.-job-launcher">Load Balancing vs.&nbsp;Job Launcher</h2>
 <p>The <a href="../job_launcher/job_launcher.html">Job Launcher</a> is another method supported by RStudio Workbench to achieve <strong>increased capacity</strong> by allowing sessions to run using a compatible computing infrastructure (i.e.&nbsp;Kubernetes). However, the Job Launcher does not aim to provide <strong>higher availability</strong>. At least two RStudio Workbench nodes in a load balancing configuration are still required to provide service continuity in failover scenarios.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>The Job Launcher itself can have its own load balancing strategy in place. See the loading balancing section in the <a href="../job_launcher/job_launcher.html">Job Launcher</a> documentation for more details.</p>
-</div>
 </div>
 <!-- -->
 </section>

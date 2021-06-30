@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -816,48 +816,18 @@
 <p>To enable authentication with OpenID you add the <code>auth-openid</code> option to the RStudio configuration file:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-openid</span><span class="ot">=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><strong>Once you enable authentication with OpenID, that becomes the exclusive means of authentication</strong> (you can’t concurrently use both PAM and OpenID authentication).</p>
 </div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>OpenID authentication still requires <a href="../r_sessions/pam_sessions.html">PAM Sessions</a> and <code>sssd</code> to automatically create local system accounts. Without them, local system accounts have to be provisioned manually one-by-one.</p>
-</div>
 </div>
 </section>
 <section id="configuring-your-openid-provider" class="level3">
 <h3 class="anchored" data-anchor-id="configuring-your-openid-provider">Configuring your OpenID Provider</h3>
 <p>In order to use OpenID with RStudio Workbench you need to register your server on your OP first.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>RStudio Workbench supports the OAuth2 “Authorization Code” flow with OpenID.</p>
-</div>
 </div>
 <section id="openid-urls" class="level4">
 <h4 class="anchored" data-anchor-id="openid-urls">OpenID URLs</h4>
@@ -871,18 +841,8 @@ Note
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">client-secret</span><span class="ot">=</span><span class="st">BhCC6rK7Sj2ZtPH0ord7lO1w</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The <code>/etc/rstudio/openid-client-secret</code> file should have user read/write file permissions (i.e., 0600) to protect its contents from other users. You can ensure this as follows:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo chmod 0600 /etc/rstudio/openid-client-secret</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>The above <code>client-id</code> and <code>client-secret</code> aren’t the actual values you’ll use. Rather, you should substitute the values that you obtained from your OP when registering your site for OAuth 2.0 authentication.</p>
-</div>
 </div>
 <section id="client-secret-encryption" class="level5">
 <h5 class="anchored" data-anchor-id="client-secret-encryption">Client Secret Encryption</h5>
@@ -895,19 +855,9 @@ Important
 <li>Add or replace the <code>client-secret</code> option in the <code>openid-client-secret</code> file using the encrypted secret copied above.</li>
 <li>Restart RStudio. Confirm it operates normally. You should no longer see a warning about unencrypted secret in RStudio logs.</li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Alternatively, you can also “pipe” your secret to the <code>rstudio-server encrypt-password</code> command to skip the prompt. Useful when the secret is already stored elsewhere. For example:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> secretfile <span class="kw">|</span> <span class="fu">sudo</span> rstudio-server encrypt-password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 </section>
 </section>
@@ -929,18 +879,8 @@ Note
 <p>Depending on your choice for the username claim your OpenID Provider may require the initial request to contain a certain “scope”. RStudio Workbench automatically includes the scopes <code>openid</code>, <code>email</code> and <code>profiles</code> as part of the authentication. If you wish to include additional scopes, use the option <code>auth-openid-scopes</code> with a space-separated list of values.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-openid-scopes</span><span class="ot">=</span><span class="st">scope1 scope2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>Quotation marks are not accepted around the scope values.</p>
-</div>
 </div>
 </section>
 <section id="proxy-considerations" class="level3">

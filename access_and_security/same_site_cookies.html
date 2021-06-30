@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -805,18 +805,8 @@
 <p>For example, the value <code>SameSite=None</code> is required by certain browsers (i.e.&nbsp;Chrome 84+) for embedding sites into an IFrame or frameset. To ensuring the delivery of RStudio cookies in this scenario, use the value <code>www-same-site=none</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">www-same-site</span><span class="ot">=</span><span class="st">none</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><code>SameSite=None</code> is insufficient without SSL enabled and may still prevent RStudio from working over non-SSL connections.</p>
-</div>
 </div>
 <p>Some browsers will not behave as expected in the presence of the <code>SameSite=None</code>; Safari 12 on MacOS 10.14 and iOS 12.x or older notably will not work. To workaround these limitations, RStudio will emit a pair of cookies, one with <code>SameSite=None</code> for standard-conforming browsers and a “legacy” cookie without <code>SameSite</code> for non-conforming browsers.</p>
 <p>You also can use the value <code>www-same-site=lax</code> to mark cookies as <code>SameSite=Lax</code> what effectively prohibits the use of RStudio embedded into an IFrame or frameset on compliant browsers by blocking all RStudio cookies.</p>

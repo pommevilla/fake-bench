@@ -18,7 +18,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -66,7 +66,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -756,18 +756,8 @@
 <section id="user-home-directories" class="level4">
 <h4 class="anchored" data-anchor-id="user-home-directories">User Home Directories</h4>
 <p>RStudio interacts frequently with user home directories. If you mount home directories with NFS, we recommend using the <code>async</code> mount option along with a modern, high-throughput network connection that can support many simultaneous clients. If you’d like your users to be able to share their projects with each other, see the section on <a href="../r_sessions/project_sharing.html">Project Sharing</a> for additional NFS requirements.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>Due to its high latencies, we strongly discourage the use of EFS (Elastic File System) for home and shared directories within AWS. If EFS is used, RStudio will experience highly degraded performance. We recommend using a traditional NFSv3 or NFSv4 mount instead.</p>
-</div>
 </div>
 </section>
 <section id="database-connectivity" class="level4">

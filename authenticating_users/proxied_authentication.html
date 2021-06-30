@@ -81,7 +81,7 @@
   <![endif]-->
   <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
   <script src="../site_libs/quarto-nav/headroom.min.js"></script>
-  <meta name="quarto:offset" content="..">
+  <meta name="quarto:offset" content="../">
   <script src="../site_libs/quarto-search/autocomplete.min.js"></script>
   <script src="../site_libs/quarto-search/fuse.min.js"></script>
   <script src="../site_libs/quarto-search/quarto-search.js"></script>
@@ -129,7 +129,7 @@
       margin-left: 30px;
     }
 
-    .cell-output-display {
+    .cell-output-display:not(.no-overflow-x) {
       overflow-x: auto;
     }
 
@@ -816,31 +816,11 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># /etc/rstudio/rserver.conf</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-proxy</span><span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">auth-proxy-sign-in-url</span><span class="ot">=</span><span class="st">http://example.com/sign-in</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p><strong>Once you enable authentication with a proxy, that becomes the exclusive means of authentication</strong> - you can’t concurrently use both PAM and proxied authentication.</p>
 </div>
-</div>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>Proxied authentication still requires <a href="../r_sessions/pam_sessions.html">PAM Sessions</a> and <code>sssd</code> to automatically create local system accounts. Without them, local system accounts have to be provisioned manually one-by-one.</p>
-</div>
 </div>
 </section>
 <section id="implementing-the-proxy" class="level3">
@@ -870,18 +850,8 @@ Important
 <div class="sourceCode" id="cb4"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">X-RStudio-Username: jsmith</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>It’s also possible to specify both a system username and a display username (in the case where system accounts are dynamically provisioned and don’t convey actual user identity). For example, if the system user is <code>ruser24</code> but the displayed username is <code>jsmith</code>, you could use:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">X-RStudio-Username: rsuser24/jsmith</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>It is highly recommended that you <em>do not use</em> the default <code>X-RStudio-Username</code> header name. The reasons for this are described in the section on <a href="#proxy-security-considerations">security considerations</a> below.</p>
-</div>
 </div>
 </section>
 <section id="rewriting-usernames" class="level4">
@@ -907,36 +877,16 @@ Note
 </section>
 <section id="preventing-internal-access" class="level4">
 <h4 class="anchored" data-anchor-id="preventing-internal-access">Preventing Internal Access</h4>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-note">
 <p>In previous versions, RStudio offered the option <code>auth-proxy-require-hmac</code> to require trust signatures from the proxy, though most proxies have no straightforward means for providing this signature. Therefore, this option has been retired. Following the recommendation below mitigates the same security risks previously covered by the option. If your installation used this option, it should removed from <code>/etc/rstudio/rserver.conf</code>. RStudio will refuse to start if this option is still present and enabled.</p>
-</div>
 </div>
 <p>Your RStudio and proxy configuration should be done in a way where it is impossible for anything other than the proxy to make requests to RStudio. Be sure that:</p>
 <ul>
 <li>RStudio is configured to listen on a network interface not accessible internally by other processes by adjusting the option <code>www-address</code>.</li>
 <li>The network interface where RStudio is running must have firewall settings to prevent any connection to RStudio other than from the proxy.</li>
 </ul>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>This should not be considered an exhaustive list. Please consult with your security personnel or IT administrators to determine the exact measures to protect RStudio authentication via a proxy.</p>
-</div>
 </div>
 </section>
 </section>
@@ -952,18 +902,8 @@ Important
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">200</span> 91 <span class="st">"http://localhost:8787/s/f01ddf8222bea98a/"</span> <span class="st">"Mozilla/5.0 (X11; Linux x86_64)</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.125 Safari/537.36"</span> <span class="st">"jsmith"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note that the very last item in the log file entry is <code>"jsmith"</code>. This is the username that RStudio read from the header passed by the proxy server. If this shows up as blank (<code>"-"</code>) then your proxy server isn’t forwarding the header or using the correct header name in forwarding.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-important">
 <p>Once you’ve concluded troubleshooting it’s important that you remove the <code>server-access-log=1</code> option from the <code>/etc/rstudio/rserver.conf</code> file (since this log file is not rotated it will eventually consume a large amount of disk space if you don’t remove the option).</p>
-</div>
 </div>
 <!-- -->
 </section>
