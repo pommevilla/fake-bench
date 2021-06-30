@@ -1,1 +1,1 @@
-Sitemap: https://www.incog-workbench.com/sitemap.xml
+Sitemap: https://incog-workbench.com/sitemap.xml

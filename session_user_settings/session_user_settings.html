@@ -74,6 +74,7 @@
     }
   </style>
   <link rel="stylesheet" href="../styles/guide.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
 <div id="quarto-search-results"></div>
@@ -81,7 +82,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
     <div class="container-fluid">
   <a class="navbar-brand" href="../index.html">
-    <img src="../images/logo.png" alt="">
+    <img src="../images/RStudio-ball.svg" alt="">
     RStudio Workbench Administration
   </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -736,9 +737,9 @@
 <table class="table">
 <colgroup>
 <col style="width: 7%">
-<col style="width: 24%">
+<col style="width: 25%">
 <col style="width: 13%">
-<col style="width: 54%">
+<col style="width: 53%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -894,538 +895,550 @@
 <td style="text-align: left;">TRUE</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">check_null_external_pointers</td>
+<td style="text-align: left;">When enabled, RStudio will detect R objects containing null external pointers when building the Environment pane, and avoid introspecting their contents further.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">check_unexpected_assignment_in_function_call</td>
 <td style="text-align: left;">Whether to check for unexpected variable assignments inside R function calls.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">clang_verbose</td>
 <td style="text-align: left;">The verbosity level to use with Clang (0 - 2)</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">clean_texi2dvi_output</td>
 <td style="text-align: left;">Whether to clean output after running Texi2Dvi.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cleanup_after_r_cmd_check</td>
 <td style="text-align: left;">Whether to clean up temporary files after running R CMD CHECK.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">code_completion</td>
 <td style="text-align: left;">When to use auto-completion for R code in the RStudio code editor.</td>
 <td style="text-align: left;">string (always, never, triggered, manual)</td>
 <td style="text-align: left;">always</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">code_completion_characters</td>
 <td style="text-align: left;">The number of characters in a symbol that can be entered before completions are offered.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">code_completion_delay</td>
 <td style="text-align: left;">The number of milliseconds to wait before offering code suggestions.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">250</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">code_completion_other</td>
 <td style="text-align: left;">When to use auto-completion for other languages (such as JavaScript and SQL) in the RStudio code editor.</td>
 <td style="text-align: left;">string (always, triggered, manual)</td>
 <td style="text-align: left;">always</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">command_palette_mru</td>
 <td style="text-align: left;">Whether to keep track of recently used commands in the Command Palette</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">console_code_completion</td>
 <td style="text-align: left;">Whether to always use code completion in the R console.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">console_double_click_select</td>
 <td style="text-align: left;">Whether double-clicking should select a word in the Console pane.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">console_line_length_limit</td>
 <td style="text-align: left;">The maximum number of characters to display in a single line in the R console.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">1000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">console_max_lines</td>
 <td style="text-align: left;">The maximum number of console actions to store and display in the console scrollback buffer.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">1000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">continue_comments_on_newline</td>
 <td style="text-align: left;">Whether continue comments (by inserting the comment character) after adding a new line.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cran_mirror</td>
 <td style="text-align: left;">The CRAN mirror to use.</td>
 <td style="text-align: left;">object</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">custom_shell_command</td>
 <td style="text-align: left;">The fully qualified path to the custom shell command to use in the Terminal tab.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">custom_shell_options</td>
 <td style="text-align: left;">The command-line options to pass to the custom shell command.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">data_viewer_max_columns</td>
 <td style="text-align: left;">The maximum number of columns to show at once in the data viewer.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">50</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">default_encoding</td>
 <td style="text-align: left;">The default character encoding to use when saving files.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">default_latex_program</td>
 <td style="text-align: left;">The default program to use when processing LaTeX documents.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">pdfLaTeX</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">default_project_location</td>
 <td style="text-align: left;">The directory path under which to place new projects by default.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">default_r_version</td>
 <td style="text-align: left;">The R version to use by default.</td>
 <td style="text-align: left;">object</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">default_sweave_engine</td>
 <td style="text-align: left;">The default engine to use when processing Sweave documents.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">Sweave</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">diagnostics_in_r_function_calls</td>
 <td style="text-align: left;">Whether to run diagnostics in R function calls.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">diagnostics_on_save</td>
 <td style="text-align: left;">Whether to check code for problems after saving it.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">disabled_aria_live_announcements</td>
 <td style="text-align: left;">List of aria-live announcements to disable.</td>
 <td style="text-align: left;">array</td>
 <td style="text-align: left;">Empty</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">doc_outline_show</td>
 <td style="text-align: left;">Which objects to show in the document outline pane.</td>
 <td style="text-align: left;">string (sections_only, sections_and_chunks, all)</td>
 <td style="text-align: left;">sections_only</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">document_author</td>
 <td style="text-align: left;">The default name to use as the document author when creating new documents.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">document_load_lint_delay</td>
 <td style="text-align: left;">The number of milliseconds to wait before linting a document after it is loaded.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">5000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">editor_keybindings</td>
 <td style="text-align: left;">The keybindings to use in the RStudio code editor.</td>
 <td style="text-align: left;">string (default, vim, emacs, sublime)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">editor_theme</td>
 <td style="text-align: left;">The name of the color theme to apply to the text editor in RStudio.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;">Textmate (default)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">emoji_skintone</td>
 <td style="text-align: left;">Preferred emoji skintone</td>
 <td style="text-align: left;">string ((None), (Default), Light, Medium-Light, Medium, Medium-Dark, Dark)</td>
 <td style="text-align: left;">(None)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">enable_screen_reader</td>
 <td style="text-align: left;">Support accessibility aids such as screen readers (RStudio Server).</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">enable_snippets</td>
 <td style="text-align: left;">Whether to enable code snippets in the RStudio code editor.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">enable_text_drag</td>
 <td style="text-align: left;">Whether to enable moving text on the editing surface by clicking and dragging it.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">execution_behavior</td>
 <td style="text-align: left;">The unit of R code to execute when the Execute command is invoked.</td>
 <td style="text-align: left;">string (line, statement, paragraph)</td>
 <td style="text-align: left;">statement</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">file_monitor_ignored_components</td>
 <td style="text-align: left;">List of path components; file monitor will ignore paths containing one or more of these components.</td>
 <td style="text-align: left;">array</td>
 <td style="text-align: left;">Empty</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">find_panel_legacy_tab_sequence</td>
 <td style="text-align: left;">In source editor find panel, tab key moves focus directly from find text to replace text.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">focus_console_after_exec</td>
 <td style="text-align: left;">Whether to focus the R console after executing an R command from a script.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">fold_style</td>
 <td style="text-align: left;">The style of folding to use.</td>
 <td style="text-align: left;">string (begin-only, begin-and-end)</td>
 <td style="text-align: left;">begin-and-end</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">font_size_points</td>
 <td style="text-align: left;">The default editor font size, in points.</td>
 <td style="text-align: left;">number</td>
 <td style="text-align: left;">10</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">full_project_path_in_window_title</td>
 <td style="text-align: left;">Whether to show the full path to project in desktop window title.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">git_diff_ignore_whitespace</td>
 <td style="text-align: left;">Whether to ignore whitespace when generating diffs of version controlled files.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">git_exe_path</td>
 <td style="text-align: left;">The path to the Git executable to use.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">global_theme</td>
 <td style="text-align: left;">The theme to use for the main RStudio user interface.</td>
 <td style="text-align: left;">string (classic, default, alternate)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">graphics_antialiasing</td>
 <td style="text-align: left;">Type of anti-aliasing to be used for generated R plots.</td>
 <td style="text-align: left;">string (default, none, gray, subpixel)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">graphics_backend</td>
 <td style="text-align: left;">R graphics backend.</td>
 <td style="text-align: left;">string (default, cairo, cairo-png, quartz, windows, ragg)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">handle_errors_in_user_code_only</td>
 <td style="text-align: left;">Whether to handle errors only when user code is on the stack.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">help_font_size_points</td>
 <td style="text-align: left;">The help panel font size, in points.</td>
 <td style="text-align: left;">number</td>
 <td style="text-align: left;">10</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">hide_console_on_chunk_execute</td>
 <td style="text-align: left;">Whether to hide the R console when executing inline R Markdown chunks.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">hide_object_files</td>
 <td style="text-align: left;">Whether to hide object files in the Files pane.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">highlight_code_chunks</td>
 <td style="text-align: left;">Whether to highlight code chunks in R Markdown documents with a different background color.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">highlight_console_errors</td>
 <td style="text-align: left;">Whether to display error, warning, and message output in a different color.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">highlight_r_function_calls</td>
 <td style="text-align: left;">Whether to highlight R function calls in the code editor.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">highlight_selected_line</td>
 <td style="text-align: left;">Highlight the selected line in RStudio’s code editor.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">highlight_selected_word</td>
 <td style="text-align: left;">Highlight the selected word in RStudio’s code editor.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">highlight_web_link</td>
 <td style="text-align: left;">Whether web links in comments are clickable.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">ignore_uppercase_words</td>
 <td style="text-align: left;">Whether to ignore words in uppercase when spell checking.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ignore_words_with_numbers</td>
 <td style="text-align: left;">Whether to ignore words with numbers in them when spell checking.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">initial_working_directory</td>
 <td style="text-align: left;">The initial working directory for new R sessions.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">insert_matching</td>
 <td style="text-align: left;">Whether to insert matching pairs, such as () and [], when the first is typed.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">insert_native_pipe_operator</td>
 <td style="text-align: left;">Whether the Insert Pipe Operator command should insert the native R pipe operator, |&gt;</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">insert_numbered_latex_sections</td>
 <td style="text-align: left;">Whether to insert numbered sections in LaTeX.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">insert_parens_after_function_completion</td>
 <td style="text-align: left;">Whether to insert parentheses after function completions.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">insert_spaces_around_equals</td>
 <td style="text-align: left;">Whether to insert spaces around the equals sign in R code.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">install_pkg_deps_individually</td>
 <td style="text-align: left;">Whether to install R package dependencies one at a time.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">jobs_tab_visibility</td>
 <td style="text-align: left;">The visibility of the Jobs tab.</td>
 <td style="text-align: left;">string (closed, shown, default)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">knit_working_dir</td>
 <td style="text-align: left;">The working directory to use when knitting R Markdown documents.</td>
 <td style="text-align: left;">string (default, current, project)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">latex_preview_on_cursor_idle</td>
 <td style="text-align: left;">When to preview LaTeX mathematical equations when cursor has not moved recently.</td>
 <td style="text-align: left;">string (never, inline_only, always)</td>
 <td style="text-align: left;">always</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">latex_shell_escape</td>
 <td style="text-align: left;">Whether to enable shell escaping with LaTeX documents.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">launcher_jobs_sort</td>
 <td style="text-align: left;">How to sort jobs in the Launcher tab in RStudio Pro and RStudio Workbench.</td>
 <td style="text-align: left;">string (recorded, state)</td>
 <td style="text-align: left;">recorded</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">limit_visible_console</td>
 <td style="text-align: left;">Whether to only show a limited window of the total console output</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">line_ending_conversion</td>
 <td style="text-align: left;">The line ending format to use when saving files.</td>
 <td style="text-align: left;">string (default, windows, posix, native, passthrough)</td>
 <td style="text-align: left;">native</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">load_workspace</td>
 <td style="text-align: left;">Whether to load the workspace when the R session begins.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">margin_column</td>
 <td style="text-align: left;">The number of columns of text after which the margin is shown.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">80</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">memory_query_interval_seconds</td>
 <td style="text-align: left;">How many seconds to wait between automatic requeries of memory statistics (0 to disable)</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">10</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">navigate_to_build_error</td>
 <td style="text-align: left;">Whether to navigate to build errors.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">new_proj_git_init</td>
 <td style="text-align: left;">Whether a git repo should be initialized inside new projects by default.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">new_project_git_init</td>
-<td style="text-align: left;">Whether to initialize new projects with a Git repo by default.</td>
+<tr class="even">
+<td style="text-align: left;">new_proj_use_renv</td>
+<td style="text-align: left;">Whether an renv environment should be created inside new projects by default.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">FALSE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">num_spaces_for_tab</td>
 <td style="text-align: left;">The number of spaces to insert when pressing the Tab key.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">2</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">packages_pane_enabled</td>
 <td style="text-align: left;">Whether to enable RStudio’s Packages pane.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">panes</td>
 <td style="text-align: left;">Layout of panes in the RStudio workbench.</td>
 <td style="text-align: left;">object</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">pdf_previewer</td>
 <td style="text-align: left;">The program to use to preview PDF files after generation.</td>
 <td style="text-align: left;">string (none, default, rstudio, desktop-synctex, system)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">plumber_viewer_type</td>
 <td style="text-align: left;">Where to display Shiny applications when they are run.</td>
 <td style="text-align: left;">string (user, none, pane, window, browser)</td>
 <td style="text-align: left;">window</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">posix_terminal_shell</td>
 <td style="text-align: left;">The terminal shell to use on POSIX operating systems (MacOS and Linux).</td>
 <td style="text-align: left;">string (default, bash, zsh, custom, none)</td>
 <td style="text-align: left;">default</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">project_safe_startup_seconds</td>
 <td style="text-align: left;">The number of seconds after which a project is deemed to have successfully started.</td>
 <td style="text-align: left;">integer</td>
 <td style="text-align: left;">30</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">publish_ca_bundle</td>
 <td style="text-align: left;">The path to the custom certificate authority (CA) bundle to use when publishing content.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">publish_check_certificates</td>
 <td style="text-align: left;">Whether to check remote server SSL certificates when publishing content.</td>
 <td style="text-align: left;">boolean</td>
 <td style="text-align: left;">TRUE</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">python_path</td>
 <td style="text-align: left;">The path to the default Python interpreter.</td>
 <td style="text-align: left;">string</td>
 <td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">python_project_environment_automatic_activate</td>
+<td style="text-align: left;">When enabled, if the active project contains a Python virtual environment, then RStudio will automatically activate this environment on startup.</td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">TRUE</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">python_type</td>
