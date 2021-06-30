@@ -10,8 +10,8 @@ site:
   downloads: [docx, pdf, epub]
   sharing: [twitter, facebook, linkedin]
   page-navigation: true
-  site-url: https://pommevilla.github.io/incog-workbench/
-  repo-url: https://github.com/pommevilla/incog-workbench
+  site-url: https://incog-workbench.com
+  repo-url: https://github.com/pommevilla/fake-bench
   repo-actions: [edit, issue]
 
   navbar:
